@@ -1,0 +1,22 @@
+[
+  {
+    "id": "01",
+    "nombre": "gatito",
+    "precio": "2"
+  },
+  {
+    "id": "02",
+    "nombre": "gatito 1",
+    "precio": "223"
+  },
+  {
+    "id": "03",
+    "nombre": "gatito 2",
+    "precio": "123"
+  },
+  {
+    "id": "04",
+    "nombre": "gatito 3",
+    "precio": "12312"
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "01",
+    "nombre": "LEDs",
+    "imagen": "nose",
+    "productos": [
+      {
+        "id": "01",
+        "nombre": "gatito",
+        "precio": "2"
+      },
+      {
+        "id": "02",
+        "nombre": "gatito 1",
+        "precio": "223"
+      },
+      {
+        "id": "03",
+        "nombre": "gatito 2",
+        "precio": "123"
+      },
+      {
+        "id": "04",
+        "nombre": "gatito 3",
+        "precio": "12312"
+      }
+    ]
+  },
+  {
+    "id": "02",
+    "nombre": "Placas",
+    "imagen": "nose",
+    "productos": [
+      {
+        "id": "01",
+        "nombre": "perrito",
+        "precio": "2"
+      },
+      {
+        "id": "01",
+        "nombre": "perrito 1",
+        "precio": "223"
+      },
+      {
+        "id": "01",
+        "nombre": "perrito 2",
+        "precio": "123"
+      },
+      {
+        "id": "01",
+        "nombre": "perrito 3",
+        "precio": "12312"
+      }
+    ]
+    
+  },
+  {
+    "id": "03",
+    "nombre": "Sensores",
+    "imagen": "nose"
+  },
+  {
+    "id": "04",
+    "nombre": "Resistencias",
+    "imagen": "nose"
+  }
+]

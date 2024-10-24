@@ -1,0 +1,12 @@
+.categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 200px;
+}
