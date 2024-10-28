@@ -3,28 +3,25 @@ import categories from '../../mocks/categories.json'
 import { useNavigate } from 'react-router-dom'
 
 export function Categories() {
-  
   return (
-    <div>
-      <h2>Categorias</h2>
-      <ul className='categories'>
+    <section>
+      <h2 className="section-name">Categorías</h2>
+      <div className="grid">
         {
           categories.map(category => (
-            <li key={category.id}>
-              <Category id={category.id} nombre={category.nombre} imagen={category.imagen} />
-            </li>
+            <Category key={category.id} id={category.id} nombre={category.nombre} imagen={category.imagen} />
           ))
         }
-      </ul>
-    </div>
+      </div>
+    </section>
   )
 }
 
 export function Category({ id, nombre, imagen }) {
   const navigate = useNavigate()
 
-  return <div className='category'>
-    <h3 onClick={ () => navigate(`/categories/${id}`) }>{nombre}</h3>
+  return <div onClick={ () => navigate(`/categories/${id}`) } className='grid-element card hoverable'>
+    <h3>{nombre}</h3>
     <img src={imagen ?? ''} alt="" />
   </div>
 }

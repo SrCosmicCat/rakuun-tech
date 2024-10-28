@@ -18,27 +18,30 @@ export function CategoryPage() {
 
   }, [id])
 
-  return <>
-    <h1>{category && category.nombre}</h1>
-    {
-      productos && productos.length > 0
-      ? (
-        productos.map(producto => (<Producto key={producto.id} id={producto.id} nombre={producto.nombre} precio={producto.precio}/>))
-      )
-      : (
-        <h4>Noay na</h4>
-      )
-    }
-  </>
+  return <section>
+    <h1 className="section-name">{category && category.nombre}</h1>
+    <div className="grid products">
+      {
+        productos && productos.length > 0
+        ? (
+          productos.map(producto => (<Producto key={producto.id} id={producto.id} imagen={producto.imagen} nombre={producto.nombre} precio={producto.precio}/>))
+        )
+        : (
+          <h4>No se han encontrado productos</h4>
+        )
+      }
+    </div>
+  </section>
 }
 
-function Producto({ id, nombre, precio }) {
+function Producto({ id, imagen, nombre, precio }) {
   const navigate = useNavigate()
 
   return (
-    <div onClick={() => navigate(`/product/${id}`) }>
+    <div onClick={() => navigate(`/product/${id}`) } className="grid-element card product hoverable">
+      <img src={imagen} alt="" />
       <h3>{nombre}</h3>
-      <p>${precio}</p>
+      <p className="price">${precio}</p>
     </div>
   )
 }

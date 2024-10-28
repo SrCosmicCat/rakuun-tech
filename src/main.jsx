@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import ErrorPage from './error-page.jsx'
 import './index.css'
 
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider, Navigate } from "react-router-dom";
 import { Root } from './routes/root.jsx'
 import { Categories } from './components/Categories/Categories.jsx';
 import { CategoryPage } from './pages/category-page.jsx';
@@ -19,6 +19,10 @@ const router = createBrowserRouter([
     ),
     errorElement: <ErrorPage />,
     children: [
+      {
+        index: true,
+        element: <Navigate to="categories" replace />
+      },
       {
         path: 'categories',
         element: <Categories />

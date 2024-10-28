@@ -1,22 +1,210 @@
 :root {
   --main-color: #0D335D;
+  --accent-color: #1D91C3;
   --light: #ffffff;
   --dark: #1e1e1e;
+
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter.ttf');
+}
+
+@font-face {
+  font-family: 'LeagueSpartan';
+  src: url('fonts/LeagueSpartan.ttf');
 }
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
+}
 
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+p, a, li, input, button, label{
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 main {
-  max-width: 850px;
+  max-width: 1100px;
   margin: 50px auto;
 }
 
 main h2 {
   font-size: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: LeagueSpartan, sans-serif;
+  font-weight: 600;
+}
+
+.section-name {
+  font-size: 2.5em;
+  margin: 20px 0;
+}
+
+.grid{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.grid.products{
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.grid-element {
+  height: 200px;
+}
+
+.grid.products .grid-element {
+  height: 300px;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  cursor: pointer;
+
+  transition: transform 0.1s;
+}
+
+.card.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card.hoverable:hover {
+  transform: scale(1.03);
+}
+
+.card h3 {
+  font-size: 1.2em;
+  font-weight: 800;
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card.product h3 {
+  font-size: 1em;
+}
+
+.card.product .price {
+  font-size: .9em;
+  font-weight: 800;
+  color: var(--accent-color);
+  margin: 10px 0;
+}
+
+.card img {
+  height: 80%;
+  
+  margin: auto;
+}
+
+.product-page .card {
+  cursor: default;
+}
+
+.product-page .card img {
+  width: 320px;
+  height: auto;
+}
+
+.product-page {
+  display: grid;
+  grid-template-areas: "main aside";
+  grid-template-columns: 1fr 0.3fr;
+  gap: 50px;
+}
+
+.product-page h2 {
+  font-size: 1.8em;
+}
+
+.product-page main .product-data{
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.product-page main section {
+  margin-bottom: 30px;
+}
+
+.product-page main .price {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin: 10px 0;
+  display: block;
+}
+
+.product-page .details h3 {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+.product-page main section div.code  {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+.product-page aside {
+  grid-area: aside;
+}
+
+.product-page aside .buy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 50px;
+}
+
+.product-page aside .buy .form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.product-page aside .buy input[type="number"] {
+  padding: 5px;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  width: 50px;
+}
+
+.product-page aside .buy .span {
+  font-size: .8em;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.product-page aside .buy button {
+  padding: 10px;
+  background-color: var(--accent-color);
+  color: var(--light);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin: 20px 0;
 }

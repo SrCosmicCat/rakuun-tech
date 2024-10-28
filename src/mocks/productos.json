@@ -1,22 +1,82 @@
 [
   {
     "id": "01",
-    "nombre": "gatito",
-    "precio": "2"
+    "nombre": "LED genérico 5mm",
+    "precio": 10,
+    "imagen": "https://uelectronics.com/wp-content/uploads/2018/10/Led-10mm-Grande-V1-800x800.jpg",
+    "descripcion": "Diodo  LED 5mm. Bicolor, 2 patas",
+    "info": [
+      {
+        "nombre": "Voltaje",
+        "valor": "3.2V"
+      },
+      {
+        "nombre": "Corriente",
+        "valor": "20mA"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Rojo"
+      }
+    ],
+    "stock": 100
   },
   {
     "id": "02",
-    "nombre": "gatito 1",
-    "precio": "223"
+    "nombre": "Resistencia 1k",
+    "precio": 10,
+    "imagen": "https://comeind.com.mx/wp-content/uploads/2022/03/resistencias-f.jpg",
+    "descripcion": "Resistencia de 1k Ohms",
+    "info": [
+      {
+        "nombre": "Valor",
+        "valor": "1k Ohms"
+      },
+      {
+        "nombre": "Potencia",
+        "valor": "1/4W"
+      }
+    ],
+    "stock": 100
   },
   {
     "id": "03",
-    "nombre": "gatito 2",
-    "precio": "123"
+    "nombre": "Capacitor 3300uF 25V",
+    "precio": 6,
+    "imagen": "https://chilangoeshop.com/shop/35941-large_default/capacitor-electrolitico-3300uf-25v-105c.jpg",
+    "descripcion": "Capacitor electrolítico de 3300uF 25V",
+    "info": [
+      {
+        "nombre": "Capacidad",
+        "valor": "3300uF"
+      },
+      {
+        "nombre": "Voltaje",
+        "valor": "25V"
+      }
+    ],
+    "stock": 100
   },
   {
     "id": "04",
-    "nombre": "gatito 3",
-    "precio": "12312"
+    "nombre": "Transistor PNP 2N3906",
+    "precio": 60,
+    "imagen": "https://electronicaseta.mx/cdn/shop/files/2N3906.jpg?v=1704245939",
+    "descripcion": "Transistor PNP 2N3906",
+    "info": [
+      {
+        "nombre": "Tipo",
+        "valor": "PNP"
+      },
+      {
+        "nombre": "Corriente",
+        "valor": "200mA"
+      },
+      {
+        "nombre": "Voltaje",
+        "valor": "40V"
+      }
+    ],
+    "stock": 100
   }
 ]

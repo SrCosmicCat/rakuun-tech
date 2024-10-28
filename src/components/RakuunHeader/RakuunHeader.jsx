@@ -1,11 +1,11 @@
 import './RakuunHeader.css'
-import RTLogo from '../../components/Icons/RTLogo.jsx'
+import { RTLogoDark } from '../../components/Icons/RTLogo.jsx'
 
 export function RakuunHeader() {
   return <header className="rakuun-header">
     <div className="rakuun-content-container">
       <div className="rakuun-logo">
-        <h1><RTLogo height={14} width={14}/> Rakuun Tech</h1>
+        <RTLogoDark height={80} width={80} /><h1>Rakuun Tech</h1>
       </div>
       <div className="header-content">
         <div className="rakuun-search-container">

@@ -1,35 +1,39 @@
 [
   {
     "id": "01",
-    "nombre": "LEDs",
-    "imagen": "nose",
+    "nombre": "Componentes",
+    "imagen": "https://www.steren.com.mx/media/catalog/product/cache/0236bbabe616ddcff749ccbc14f38bf2/image/170921ce4/led-de-5-mm-color-rojo-super-brillante.jpg",
     "productos": [
       {
         "id": "01",
-        "nombre": "gatito",
-        "precio": "2"
+        "nombre": "LED genérico 5mm",
+        "precio": 10,
+        "imagen": "https://uelectronics.com/wp-content/uploads/2018/10/Led-10mm-Grande-V1-800x800.jpg"
       },
       {
         "id": "02",
-        "nombre": "gatito 1",
-        "precio": "223"
+        "nombre": "Resistencia 1k",
+        "precio": 10,
+        "imagen": "https://comeind.com.mx/wp-content/uploads/2022/03/resistencias-f.jpg"
       },
       {
         "id": "03",
-        "nombre": "gatito 2",
-        "precio": "123"
+        "nombre": "Capacitor 3300uF 25V",
+        "precio": 6,
+        "imagen": "https://chilangoeshop.com/shop/35941-large_default/capacitor-electrolitico-3300uf-25v-105c.jpg"
       },
       {
         "id": "04",
-        "nombre": "gatito 3",
-        "precio": "12312"
+        "nombre": "Transistor PNP 2N3906",
+        "precio": 60,
+        "imagen": "https://electronicaseta.mx/cdn/shop/files/2N3906.jpg?v=1704245939"
       }
     ]
   },
   {
     "id": "02",
-    "nombre": "Placas",
-    "imagen": "nose",
+    "nombre": "Microcontroladores",
+    "imagen": "https://m.media-amazon.com/images/I/61AvdQOxFzL.jpg",
     "productos": [
       {
         "id": "01",
@@ -57,11 +61,11 @@
   {
     "id": "03",
     "nombre": "Sensores",
-    "imagen": "nose"
+    "imagen": "https://www.steren.com.mx/media/catalog/product/cache/0236bbabe616ddcff749ccbc14f38bf2/image/1945948ab/sensor-ultrasonico.jpg"
   },
   {
     "id": "04",
-    "nombre": "Resistencias",
-    "imagen": "nose"
+    "nombre": "Otros",
+    "imagen": "https://static.wixstatic.com/media/5d7833_cf2c578657ce4396b2befa780dd7e6ba~mv2.jpg/v1/fill/w_480,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/5d7833_cf2c578657ce4396b2befa780dd7e6ba~mv2.jpg"
   }
 ]
