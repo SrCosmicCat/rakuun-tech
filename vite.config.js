@@ -14,7 +14,7 @@ const PWAmanifest = {
     name: 'Rakuun Tech',
     short_name: 'Rakuun',
     description: 'Tu tienda de tecnología',
-    "icons": [
+    icons: [
       {
         "src": "windows11/SmallTile.scale-100.png",
         "sizes": "71x71"
