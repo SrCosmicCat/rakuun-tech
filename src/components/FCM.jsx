@@ -14,7 +14,6 @@ function FCM() {
   const [message, setMessage] = useState(null);
 
   useEffect(() => {
-    toast("FCM");
     const permission = Notification.requestPermission()
       .then(permission => {
         console.log("Permission: ", permission);

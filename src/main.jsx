@@ -12,6 +12,11 @@ import { ProductPage } from './pages/product-page.jsx';
 import { CartProvider } from './providers/Cart.jsx'
 import { CartPage } from './pages/cart-page.jsx';
 import './swRegister.js';
+import { DonatePage } from './pages/donate-page.jsx';
+
+import { AuthProvider } from './providers/Auth.jsx';
+import LoginPage from './pages/login-page.jsx';
+import RegisterPage from './pages/register-page.jsx';
 
 const router = createBrowserRouter([
   {
@@ -42,15 +47,29 @@ const router = createBrowserRouter([
       {
         path: 'cart',
         element: <CartPage />
-      }
+      },
+      {
+        path: 'donate',
+        element: <DonatePage />
+      },
+      {
+        path: 'login',
+        element: <LoginPage />
+      },
+      {
+        path: 'register',
+        element: <RegisterPage />
+      },
     ]
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <CartProvider>
-      <RouterProvider router={router} />
-    </CartProvider>
+    <AuthProvider>
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>
+    </AuthProvider>
   </StrictMode>,
 )

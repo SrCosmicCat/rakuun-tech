@@ -1,7 +1,12 @@
 import './RakuunHeader.css'
 import { RTLogoDark } from '../../components/Icons/RTLogo.jsx'
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../../providers/Auth.jsx'
 
 export function RakuunHeader() {
+  const navigate = useNavigate()
+  const { currentUser, logout } = useAuth()
+
   return <header className="rakuun-header">
     <div className="rakuun-content-container">
       <div className="rakuun-logo">
@@ -16,11 +21,31 @@ export function RakuunHeader() {
         </div>
         <nav className="rakuun-nav-buttons">
           <ul>
-            <li>Categorias</li>
-            <li>Crear cuenta</li>
-            <li>Ingresar</li>
-            <li>Donar</li>
-            <li>Carrito</li>
+            <li onClick={() => navigate('/categories')}>Categorias</li>
+            <li onClick={() => navigate('/donate')}>Donar</li>
+            {
+              // currentUser
+              // ? <li onClick={() => navigate('/profile')}>Perfil</li> 
+              // : null
+              console.log('currentUser', currentUser)
+            }
+            {
+              !currentUser
+              ? <li onClick={() => navigate('/login')}>Login</li> 
+              : null
+            }
+            {
+              !currentUser
+              ? <li onClick={() => navigate('/register')}>Registro</li> 
+              : null
+            }
+            
+            <li onClick={() => navigate('/cart')}>Carrito</li>
+            {
+              currentUser
+              ? <li onClick={() => {console.log('cerrar sesion'); logout()}}>Cerrar sesión</li>
+              : null
+            }
           </ul>
         </nav>
       </div>
