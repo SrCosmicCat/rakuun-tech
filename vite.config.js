@@ -3,8 +3,19 @@ import react from '@vitejs/plugin-react-swc'
 import { VitePWA } from "vite-plugin-pwa";
 
 const PWAmanifest = {
-  registerType: 'prompt',
   includeAssets: ['favicon.ico'],
+  registerType: 'autoUpdate',
+  strategies: 'injectManifest',
+  srcDir: 'src',
+  filename: 'sw.js',
+  injectManifest: {
+    globPatterns: ['**/*.{js,css,html,png,svg}'], // Archivos a precachear
+  },
+  workbox: {
+    swSrc: 'src/sw.js', // Ruta de tu Service Worker en tu proyecto.
+    swDest: 'dist/sw.js', // Dónde se colocará el archivo en producción.
+  },
+  injectRegister: 'inline', // Inserta automáticamente el registro.
   manifest: {
     name: 'Rakuun Tech',
     short_name: 'Rakuun',

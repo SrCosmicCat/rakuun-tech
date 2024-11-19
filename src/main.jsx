@@ -11,6 +11,7 @@ import { ProductPage } from './pages/product-page.jsx';
 
 import { CartProvider } from './providers/Cart.jsx'
 import { CartPage } from './pages/cart-page.jsx';
+import './swRegister.js';
 
 const router = createBrowserRouter([
   {
