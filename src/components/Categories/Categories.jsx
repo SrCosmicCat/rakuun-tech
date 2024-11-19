@@ -1,8 +1,20 @@
 import './Categories.css'
-import categories from '../../mocks/categories.json'
+//import categories from '../../mocks/categories.json'
+import { API_URL } from '../../constants.js'
 import { useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 export function Categories() {
+  
+  const [categories, setCategories] = useState([])
+
+  useEffect(() => {
+    fetch(`${API_URL}/categorias.json`)
+      .then(response => response.json())
+      .then(data => setCategories(data))
+  }, [])
+  
+  
   return (
     <section>
       <h2 className="section-name">Categorías</h2>

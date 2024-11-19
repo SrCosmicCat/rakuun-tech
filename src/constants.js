@@ -1,0 +1,1 @@
+export const API_URL = 'https://rakuun-tech-default-rtdb.firebaseio.com'

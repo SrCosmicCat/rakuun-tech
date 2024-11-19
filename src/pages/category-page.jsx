@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { useNavigate } from 'react-router-dom'
-import categories from '../mocks/categories.json'
+//import categories from '../mocks/categories.json'
+import { API_URL } from '../constants.js'
 
 export function CategoryPage() {
   const { id } = useParams()  
@@ -10,11 +11,19 @@ export function CategoryPage() {
 
   useEffect(() => {
     
-    // TODO: Fetch jeje
-    const categoryFromJson = categories.find(category => category.id === id)
+    fetch(`${API_URL}/categorias.json`)
+      .then(response => response.json())
+      .then(data => {
+        const categoryFromJson = data.find(category => category.id === id)
+        setCategory(categoryFromJson)
+        setProductos(categoryFromJson.productos)
+      })
+
+
+    // const categoryFromJson = categories.find(category => category.id === id)
     
-    setCategory(categoryFromJson)
-    setProductos(categoryFromJson.productos)
+    // setCategory(categoryFromJson)
+    // setProductos(categoryFromJson.productos)
 
   }, [id])
 

@@ -9,6 +9,9 @@ import { Categories } from './components/Categories/Categories.jsx';
 import { CategoryPage } from './pages/category-page.jsx';
 import { ProductPage } from './pages/product-page.jsx';
 
+import { CartProvider } from './providers/Cart.jsx'
+import { CartPage } from './pages/cart-page.jsx';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -34,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: 'product/:id',
         element: <ProductPage />
+      },
+      {
+        path: 'cart',
+        element: <CartPage />
       }
     ]
   },
@@ -42,6 +49,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
   </StrictMode>,
 )
