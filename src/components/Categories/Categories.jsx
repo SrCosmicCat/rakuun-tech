@@ -3,6 +3,7 @@ import './Categories.css'
 import { API_URL } from '../../constants.js'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import FCM from '../FCM.jsx'
 
 export function Categories() {
   
@@ -17,6 +18,7 @@ export function Categories() {
   
   return (
     <section>
+      <FCM />
       <h2 className="section-name">Categorías</h2>
       <div className="grid">
         {
