@@ -8,12 +8,12 @@
 
 @font-face {
   font-family: 'Inter';
-  src: url('fonts/Inter.ttf');
+  src: url('/fonts/Inter.ttf');
 }
 
 @font-face {
   font-family: 'LeagueSpartan';
-  src: url('fonts/LeagueSpartan.ttf');
+  src: url('/fonts/LeagueSpartan.ttf');
 }
 
 * {

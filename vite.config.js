@@ -9,29 +9,48 @@ const PWAmanifest = {
     name: 'Rakuun Tech',
     short_name: 'Rakuun',
     description: 'Tu tienda de tecnología',
+    lang: 'es-MX',
+    display_override: ['standalone'],
+    display: 'standalone',
+    theme_color: '#ffffff',
+    background_color: '#ffffff',
     icons: [
       {
-        src: '/android-launchericon-512-512.png',
-        sizes: '512x512',
+        src: 'icon-64-64.png',
+        sizes: '64x64',
         type: 'image/png',
-        purpose: 'favicon'
       },
       {
-        src: '/Square44x44Logo.targetsize-256.png',
-        sizes: '256x256',
-        type: 'image/png'
+        src: 'icon-192-192.png',
+        sizes: '192x192',
+        type: 'image/png',
+        purpose: 'any'
       },
       {
-        src: '/android-launchericon-512-512.png',
+        src: 'icon-512-512.png',
         sizes: '512x512',
         type: 'image/png',
-        purpose: 'any maskable'
+        purpose: 'maskable'
       },
-      
     ],
-    theme_color: '#000000',
-    background_color: '#000000',
-    display: 'standalone',
+    screenshots: [
+      {
+        src: 'screenshots/screenshot-1.png',
+        sizes: '1410x807',
+        type: 'image/png',
+        form_factor: 'wide',
+        label: 'Vista de la tienda',
+        description: 'Vista de la tienda en la que se muestran los productos disponibles'
+      },
+      {
+        src: 'screenshots/screenshot-2.png',
+        sizes: '1410x807',
+        type: 'image/png',
+        form_factor: 'tall',
+        label: 'Vista de la tienda',
+        description: 'Vista de la tienda en la que se muestran los productos disponibles'
+      }
+    ],
     scope: '/',
     startUrl: '/',
     orientation: 'portrait',
